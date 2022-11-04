@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Inkrementator tekstu"/>
+    <meta name="keywords" content="increment, tekst, strings"/>
+    
+    <style>
+        #input
+        {
+            width: 800px;
+            height: 30px;
+        }
+
+        #output
+        {
+            width: 800px;
+            border-style: solid;
+            border-color:rgb(228, 81, 81) ;
+            border-width: 2px;
+            border-radius: 4px;
+        }
+
+        #btnStart
+        {
+            width: 200px;
+            height: 70px;
+        }
+
+        input
+        {
+            border-radius: 4px;
+        }
+    
+    </style>
+
+</head>
+
+<body id="bdy">
+
+    <div id="interface">
+        <input id="input" type="text"  placeholder="Input" autofocus /> <br><br>
+        <input id="valStart" type="text"  placeholder="Wartość początkowa"  />
+        <input id="valEnd" type="text"  placeholder="Wartość końcowa" />
+        <input id="step" type="text"  placeholder="Skok" />
+        <input id="key" type="text"  placeholder="Klucz" /> <br><br>
+        <input id="btnStart" type="submit" value="Start" />
+    </div>
+    <br>
+    <div id="output">
+        output
+    </div>
+
+</body>
+
+<script>
+
+    function modifyChars(word, oldChar, newChar)
+    {
+        var newWord='';
+
+        // for(var i=0; i < word.length; i++)
+        // {
+        //     if (word[i] == oldChar)
+        //     {
+        //         newWord = newWord+newChar;  
+        //     }
+        //     else newWord = newWord+word[i];
+        // }
+
+        for( let i of word)
+        {
+            if (i == oldChar)
+            {
+                newWord = newWord+newChar;  
+            }
+            else newWord = newWord+i;
+        }
+
+        console.log("modifyChars done")
+        return newWord;
+    }
+
+    function incrementString()
+    {
+        var newWord='';
+
+        for(var i=startVal; i<=endVal; i=i+step)
+        {
+            newWord = newWord+ modifyChars(sourceWord, key, i) + "<br>";
+        }
+
+        console.log("incrementString done")
+        return newWord;
+    }
+
+        
+        var startVal;
+        var endVal;
+        var step;
+        var key;
+        var sourceWord;
+
+    
+    //handle start button
+    document.getElementById("btnStart").onclick = function ()
+    {
+        //read input fields
+        startVal = parseInt(document.getElementById("valStart").value);
+        endVal = parseInt(document.getElementById("valEnd").value);
+        step = parseInt(document.getElementById("step").value);
+        key  = document.getElementById("key").value;
+        sourceWord = document.getElementById("input").value;
+
+        
+        document.getElementById("output").innerHTML=incrementString();
+        console.log("main function done");
+    };
+
+    //console.log(incrementString(-1, 5, ".", "Jeden.Dwa."));
+</script>
+</html>
