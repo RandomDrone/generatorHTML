@@ -4,15 +4,6 @@ function modifyChars(word, oldChar, newChar)
 {
     var newWord='';
 
-    // for(var i=0; i < word.length; i++)
-    // {
-    //     if (word[i] == oldChar)
-    //     {
-    //         newWord = newWord+newChar;  
-    //     }
-    //     else newWord = newWord+word[i];
-    // }
-
     for( let i of word)
     {
         if (i == oldChar)
@@ -22,65 +13,46 @@ function modifyChars(word, oldChar, newChar)
         else newWord = newWord+i;
     }
 
-   // console.log("modifyChars done")
     return newWord;
 }
-
 
 //handle start button
 document.getElementById("btnStart").onclick = function ()
 {
-    var result1 = ["ROB?_Sercos.Slave_x.DeviceCodey"];
-    const test = ["aa","bb","cc"];
+    var result1 = [];
     var result2 = [];
     var finalResults =[];
     var finalOutput = "";
-    var state = 0;
-    var newWord= '';
-    var index = 0;
-    var startVal;
-    var endVal;
-    var step;
-    var key,key2;
-    var sourceWord;
+    // var inputWord;
     var keysArray = [
         {
-            startVal:1,
-            endVal:3,
-            step:1,
-            key:"?"
+            startVal: 0,
+            endVal: 0,
+            step: 0,
+            key: ""
         },
         {
-            startVal:1,
-            endVal:2,
-            step:1,
-            key:"x"
-        },
-        {
-            startVal:1,
-            endVal:4,
-            step:1,
-            key:"y"
+            startVal: 0,
+            endVal: 0,
+            step: 0,
+            key: ""
         }
     ];
 
     //read input fields
-    startVal = parseInt(document.getElementById("valStart").value);
-    endVal = parseInt(document.getElementById("valEnd").value);
-    step = parseInt(document.getElementById("step").value);
-    key  = document.getElementById("key").value;
-    key2  = document.getElementById("key2").value;
-    sourceWord = document.getElementById("input").value;
+    result1[0] = document.getElementById("input").value;
+
+    keysArray[0].startVal = parseInt(document.getElementById("valStart").value);
+    keysArray[0].endVal = parseInt(document.getElementById("valEnd").value);
+    keysArray[0].step = parseInt(document.getElementById("step").value);
+    keysArray[0].key  = document.getElementById("key").value;
+
+    keysArray[1].startVal = parseInt(document.getElementById("valStart2").value);
+    keysArray[1].endVal = parseInt(document.getElementById("valEnd2").value);
+    keysArray[1].step = parseInt(document.getElementById("step2").value);
+    keysArray[1].key  = document.getElementById("key2").value;
    
     //incrementString
-    // for(let i=startVal; i<=endVal; i=i+step)
-    // {
-    //    // newWord = newWord+ modifyChars(sourceWord, key, i) + "<br>";
-    //    result1.push(modifyChars(sourceWord, key, i));
-       
-    // }
-
-    console.log(keysArray.length);
     for(let k = 0; k < keysArray.length; k++)
     {
        if( (k%2) === 0 )

@@ -1,0 +1,8 @@
+check input values:
+    -klucz nie powinien zawierac cyfr ->konflikty -> moze nadpisywac cyfry ktore zostaly wygenerowane podczas dzialania
+    -wartosc koncowa nie moze byc mniejsz niz poczatkowa
+    -skok musi byc wartoscia dodatnia
+hihglit empty fields
+dynamic adding keys
+generaly wyglad
+sortowanie wynikow
