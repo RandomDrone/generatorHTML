@@ -23,14 +23,14 @@ document.getElementById("btnStart").onclick = function ()
     var result2 = [];
     var finalResults =[];
     var finalOutput = "";
-    // var inputWord;
+    var keyObj = 
+    {
+        startVal: 0,
+        endVal: 0,
+        step: 0,
+        key: ""
+    };
     var keysArray = [
-        {
-            startVal: 0,
-            endVal: 0,
-            step: 0,
-            key: ""
-        },
         {
             startVal: 0,
             endVal: 0,
@@ -47,6 +47,7 @@ document.getElementById("btnStart").onclick = function ()
     keysArray[0].step = parseInt(document.getElementById("step").value);
     keysArray[0].key  = document.getElementById("key").value;
 
+    keysArray.push(keyObj);
     keysArray[1].startVal = parseInt(document.getElementById("valStart2").value);
     keysArray[1].endVal = parseInt(document.getElementById("valEnd2").value);
     keysArray[1].step = parseInt(document.getElementById("step2").value);
