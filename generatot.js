@@ -47,12 +47,16 @@ document.getElementById("btnStart").onclick = function ()
     keysArray[0].step = parseInt(document.getElementById("step").value);
     keysArray[0].key  = document.getElementById("key").value;
 
+    
+    keyObj.startVal = parseInt(document.getElementById("valStart2").value);
+    keyObj.endVal = parseInt(document.getElementById("valEnd2").value);
+    keyObj.step = parseInt(document.getElementById("step2").value);
+    keyObj.key  = document.getElementById("key2").value;
+   if(keyObj.startVal != NaN && keyObj.endVal != NaN && keyObj.step != NaN && keyObj.step > 0 && keyObj.key != "")
+   {
     keysArray.push(keyObj);
-    keysArray[1].startVal = parseInt(document.getElementById("valStart2").value);
-    keysArray[1].endVal = parseInt(document.getElementById("valEnd2").value);
-    keysArray[1].step = parseInt(document.getElementById("step2").value);
-    keysArray[1].key  = document.getElementById("key2").value;
-   
+   }
+    
     //incrementString
     for(let k = 0; k < keysArray.length; k++)
     {
