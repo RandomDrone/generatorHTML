@@ -1,4 +1,5 @@
 dynamic adding keys
+podswietlanie znaku klucza w slowie zlodrowym - zeby uniknac przypadkowego zdublowania znakow/inkrementacji niewlasciwego znaku
 
 
 check input values:
@@ -11,3 +12,4 @@ hihglit empty fields
 generaly wyglad
 sortowanie wynikow
 przy dodawaniu nowego klucza - kopiowanie zakresu i  skoku z poprzedniego
+nie radzi sobie ze znakiem <

@@ -52,8 +52,10 @@ document.getElementById("btnStart").onclick = function ()
     keyObj.endVal = parseInt(document.getElementById("valEnd2").value);
     keyObj.step = parseInt(document.getElementById("step2").value);
     keyObj.key  = document.getElementById("key2").value;
-   if(keyObj.startVal != NaN && keyObj.endVal != NaN && keyObj.step != NaN && keyObj.step > 0 && keyObj.key != "")
+    //
+   if( !isNaN(keyObj.startVal) && !isNaN(keyObj.endVal) && !isNaN(keyObj.step) && keyObj.step > 0 && keyObj.key != "" )
    {
+    console.log("obj added")
     keysArray.push(keyObj);
    }
     
