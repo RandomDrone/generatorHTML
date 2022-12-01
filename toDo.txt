@@ -1,5 +1,5 @@
-dynamic adding keys
-podswietlanie znaku klucza w slowie zlodrowym - zeby uniknac przypadkowego zdublowania znakow/inkrementacji niewlasciwego znaku
+!!dynamic adding keys
+!!podswietlanie znaku klucza w slowie zlodrowym - zeby uniknac przypadkowego zdublowania znakow/inkrementacji niewlasciwego znaku
 
 
 check input values:
@@ -9,7 +9,7 @@ check input values:
     -w polach wart poczatkowa,koncowa,skok moga byc tylko cyfry
 walidacja i wyswietlanie komunikatow powinny sie odbywac podcas wpisywania-przed wcisnieciem prycisku start
 hihglit empty fields
-generaly wyglad
+!!generaly wyglad
 sortowanie wynikow
 przy dodawaniu nowego klucza - kopiowanie zakresu i  skoku z poprzedniego
 nie radzi sobie ze znakiem <
