@@ -2,7 +2,7 @@
 <html lang="pl">
 
 <head>
-    <title>Ver. 2022_11_04_</title>
+    <title>add-multiKey-feature; Jan 4, 2023</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Inkrementator tekstu"/>
     <meta name="keywords" content="increment, tekst, strings"/>
@@ -46,10 +46,16 @@
 
     <div id="interface">
         <input id="input" type="text"  placeholder="Input" autofocus /> <br><br>
+
         <input id="valStart" type="text"  placeholder="Wartość początkowa"  />
         <input id="valEnd" type="text"  placeholder="Wartość końcowa" />
         <input id="step" type="text"  placeholder="Skok" />
-        <input id="key" type="text"  placeholder="Klucz" /> <br><br>
+        <input id="key" type="text"  placeholder="Klucz" /> <br>
+
+        <input id="valStart2" type="text"  placeholder="Wartość początkowa 2"  />
+        <input id="valEnd2" type="text"  placeholder="Wartość końcowa 2" />
+        <input id="step2" type="text"  placeholder="Skok 2" />
+        <input id="key2" type="text"  placeholder="Klucz 2" /><br><br>
 
         <input class="button" id="btnStart" type="submit" value="Start" /><br><br><br>
         <button class="button" id="btnCopy" >Kopiuj do schowka</button>
@@ -57,7 +63,7 @@
         <span id="snackbar">Successfully Copied</span>
     </div>
     <br>
-    <div type="text" id="output">
+    <div  id="output">
         output
     </div>
 
