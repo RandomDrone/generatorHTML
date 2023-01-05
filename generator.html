@@ -2,16 +2,42 @@
 <html lang="pl">
 
 <head>
-    <title>add-multiKey-feature; Jan 4, 2023</title>
+    <title>add-multiKey-feature; Jan 5, 2023</title>
     <meta charset="UTF-8" />
     <meta name="description" content="Inkrementator tekstu"/>
     <meta name="keywords" content="increment, tekst, strings"/>
     
     <style>
-        #input
+        #mainInput
         {
             width: 800px;
             height: 30px;
+        }
+
+        #btnAddRuleKey
+        {
+            width: 50px;
+            height: 50px;
+        }
+
+        .keysRules
+        {
+            border-style: solid;
+            height: 90px;
+            width: 900px;
+            white-space: nowrap;
+            overflow-x: scroll;
+            overflow-y: scroll;  
+        }
+        .keyRule input 
+        {
+            margin-right: 10px;
+            margin-bottom: 20px;
+        }
+        .keyRule input:last-child
+        {
+            background-color: red;
+            margin-right: 0px;
         }
 
         #output
@@ -33,6 +59,7 @@
         input
         {
             border-radius: 4px;
+           
         }
 
        
@@ -45,17 +72,30 @@
 <body id="bdy">
 
     <div id="interface">
-        <input id="input" type="text"  placeholder="Input" autofocus /> <br><br>
+        <input id="mainInput" type="text"  placeholder="Input" autofocus /> <br><br>
+        
+        <div id="rulesInterface">
+            <button id="btnAddRuleKey" >+</button>
+            <div class="keysRules">
+                <div class="keyRule">
+                    <input id="valStart" type="text"  placeholder="Wartość początkowa"  />
+                    <input id="valEnd" type="text"  placeholder="Wartość końcowa" />
+                    <input id="step" type="text"  placeholder="Skok" />
+                    <input id="key" type="text"  placeholder="Klucz" />
+                </div>
+                
+                <div class="keyRule">
+                    <input id="valStart2" type="text"  placeholder="Wartość początkowa 2"  />
+                    <input id="valEnd2" type="text"  placeholder="Wartość końcowa 2" />
+                    <input id="step2" type="text"  placeholder="Skok 2" />
+                    <input id="key2" type="text"  placeholder="Klucz 2" />
+                </div>
+            </div>
+        </div>
 
-        <input id="valStart" type="text"  placeholder="Wartość początkowa"  />
-        <input id="valEnd" type="text"  placeholder="Wartość końcowa" />
-        <input id="step" type="text"  placeholder="Skok" />
-        <input id="key" type="text"  placeholder="Klucz" /> <br>
 
-        <input id="valStart2" type="text"  placeholder="Wartość początkowa 2"  />
-        <input id="valEnd2" type="text"  placeholder="Wartość końcowa 2" />
-        <input id="step2" type="text"  placeholder="Skok 2" />
-        <input id="key2" type="text"  placeholder="Klucz 2" /><br><br>
+      </div>
+        
 
         <input class="button" id="btnStart" type="submit" value="Start" /><br><br><br>
         <button class="button" id="btnCopy" >Kopiuj do schowka</button>

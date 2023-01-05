@@ -40,7 +40,7 @@ document.getElementById("btnStart").onclick = function ()
     ];
 
     //read input fields
-    result1[0] = document.getElementById("input").value;
+    result1[0] = document.getElementById("mainInput").value;
 
     keysArray[0].startVal = parseInt(document.getElementById("valStart").value);
     keysArray[0].endVal = parseInt(document.getElementById("valEnd").value);
